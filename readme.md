@@ -3,4 +3,4 @@ it's written in php and relies on twitteroauth/twitteroauth.php (https://github.
 
 in addition to retweeting it saves the tweets in an sqlite db for future analysis and research
 
-license: GPL
+license: GPL3
