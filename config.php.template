@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * A single location to store configuration.
+ */
+
+define('CONSUMER_KEY', '');
+define('CONSUMER_SECRET', '');
+define('OAUTH_CALLBACK', 'http://local.dev/twitteroauth/callback.php');
+define('ACCESS_TOKEN','');
+define('ACCESS_TOKEN_SECRET','');
+?>

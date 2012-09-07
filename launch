@@ -1,0 +1,15 @@
+#!/bin/bash
+cd ~/twitter/phptwitter/php2/twitteroauth;
+PID=`cat pid`
+grep -q bash /proc/${PID}/cmdline
+if [[ $? == 0 ]] ; then
+	echo news is already running;
+	exit 0;
+fi
+
+echo $$ > pid
+#backup_to_aws
+while [[ 1 ]]; do
+ 	php5 -q -d html_errors=0 news.php >> log 
+	sleep 120;
+done; 

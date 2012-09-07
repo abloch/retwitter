@@ -1,0 +1,7 @@
+#!/bin/bash
+cd ~/twitter/phptwitter/php2/twitteroauth
+git add news.db log
+date=$( date -u "+%F %T %Z" )
+git commit -m "news automatic backup - $date"
+git commit -m "daily news backup - $date"
+git push havruta

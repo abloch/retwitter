@@ -1,0 +1,4 @@
+#!/bin/bash
+ssh_havruta ./twitter/phptwitter/php2/twitteroauth/backuper
+git pull > /dev/null
+echo 'select text,url from news order by rowid desc limit 20;' | sqlite news.db

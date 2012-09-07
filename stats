@@ -1,0 +1,12 @@
+#!/bin/bash
+function query
+{
+	echo $1 | sqlite news.db;
+}
+
+first=$( query "select datetime(date,'unixepoch') from news order by date limit 1;" );
+last=$( query " select strftime('%s','now') - (select date from news order by date desc limit 1);" );
+count=$( query "select count(*) from news;" );
+lastMins=$( expr $last / 60 );
+
+echo we have $count items sience $first and was updated $lastMins minutes ago;
